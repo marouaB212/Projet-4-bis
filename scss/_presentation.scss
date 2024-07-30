@@ -1,0 +1,29 @@
+@import 'couleur';
+@import 'police';
+@import 'mixins';
+
+.presentation{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: $grisclair;
+    font-family: $policeprincipale;
+    position: relative;
+    
+    @include ombre_presentation;
+
+    &__icone {
+    margin-right: 20px;
+    color: $grisicone;
+    }
+
+
+}
+
+/* Media queries*/
+/* ecran égal ou plus grand que 1024px */
+@media (min-width: 1024px) {
+    .presentation {
+        box-shadow: none;
+    }
+}
