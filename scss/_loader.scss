@@ -1,0 +1,70 @@
+@import 'couleur';
+@import 'police';
+
+
+.loader {
+    position: fixed;
+    z-index: -2;
+    width: 100%;
+    height: 100vh;
+    background-color: $violet;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    animation: visibility 3s ease forwards;
+    opacity: 0;
+
+    &__texte {
+        font-size: 50px;
+        font-weight: 300;
+        font-family: $policeicone;
+        color: $blanc;
+        letter-spacing: 3px;
+        animation: text 0.9s linear infinite;
+    }
+       
+}
+
+// loader
+
+
+@keyframes visibility {
+    0%{
+        opacity: 1;
+        z-index: 100;
+    }
+    50%{
+        opacity: .8;
+    }
+    90%{
+        opacity: .5;
+    }
+
+    100%{
+        opacity: 0;
+        z-index: 0;
+        display: none;
+    }
+}
+
+@keyframes text {
+    from {
+        opacity: 1;
+    }
+
+    to{
+        opacity: 0;
+    }
+}
+
+
+@keyframes appear {
+    from{
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

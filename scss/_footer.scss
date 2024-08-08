@@ -1,0 +1,70 @@
+@import 'couleur';
+@import 'police';
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: $bggris;
+    padding: 22px 25px;
+
+
+    &__liste {
+        display: flex;
+        gap: 14px;
+        color: $blanc;
+        font-family: $policeprincipale;
+        font-weight: 400;
+
+
+        &--icone {
+            width: 11px;
+            height: 13px;
+        }
+
+        &--icone i {
+
+            font-size: 16px;
+        }
+
+        &--contact {
+            color: $blanc;
+            text-decoration: none;
+        }
+
+    }
+
+    &__partie {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        padding: 0;
+    }
+
+
+    &__logo {
+
+        width: 139px;
+        height: 27px;
+
+    }
+}
+
+
+
+/* Media queries*/
+/* ecran égal ou plus grand que 1024px */
+@media (min-width: 1024px) {
+    .footer {
+        align-items: center;
+        flex-direction: row-reverse;
+        height: 114px;
+        padding: 0 25px;
+        gap: 60px;
+
+       &__partie {
+        flex-direction: row; 
+        gap: 20px;
+       } 
+    }
+}
