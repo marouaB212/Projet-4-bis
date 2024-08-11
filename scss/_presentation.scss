@@ -9,6 +9,7 @@
     background-color: $grisclair;
     font-family: $policeprincipale;
     position: relative;
+    height: 50px;
     
     @include ombre_presentation;
 
@@ -18,7 +19,21 @@
     }
 
 
+
+    &__input {
+    background-color: transparent;
+    border: none; 
+    color: black; 
+    font-size: 16px;
+    outline: none;
+    cursor: text; 
+    width: auto; 
+    }
+
+
 }
+
+
 
 /* Media queries*/
 /* ecran égal ou plus grand que 1024px */
